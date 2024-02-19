@@ -1,0 +1,256 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    max-height: none;
+}
+
+.bg-pink{
+    background-color: rgba(248, 122, 185, 0.51);
+}
+
+.bg-pinks{
+    background-color: hotpink;
+    opacity: 0.9;
+}
+
+.bg-black-mode{
+    background-color: rgba(67, 63, 63, 0.515)
+}
+
+.blen-mode{
+    mix-blend-mode:darken;
+    border-radius: 40%;
+}
+
+.ws-1{
+    letter-spacing: -3px;
+}
+
+/* hdr text color */
+.text-color{
+    color: rgba(47, 77, 3, 0.742);
+}
+
+@media (min-width:1071px) {
+    .wh-8{
+        width: 110px;
+        height: 45px;
+    }
+    
+}
+
+.border-right{
+    border-right: 2px solid hotpink;
+}
+
+.custome-hr{
+    height: 4px;
+    background-color: #ea10dc; /* Set your desired background color */
+    border: none;
+    margin-top: -2px;
+    position: sticky;
+    top: 65px;
+}
+
+.vh-50{
+    height: auto;
+}
+
+.text-blue{
+    color: blue;
+}
+
+/* text animation */
+.text-animate h2 {
+    font-size: 36px;
+    text-align: center;
+    color:black
+  }
+
+  .text-animate h2 span {
+    display: inline-block;
+    opacity: 0.1;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+    animation: fadeIn 11s forwards infinite;
+  }
+
+  h2:hover span {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .text-animate h2 span:nth-child(odd) {
+    color: #3366cc; /* Change to your preferred color */
+  }
+
+  .text-animate h2 span:nth-child(even) {
+    color: #ff6633; /* Change to your preferred color */
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+  .text-animate h2 span:nth-child(1) {
+    animation-delay: 0.5s;
+  }
+
+  .text-animate h2 span:nth-child(2) {
+    animation-delay: 1s;
+  }
+
+  .text-animate h2 span:nth-child(3) {
+    animation-delay: 1.5s;
+  }
+
+  .text-animate h2 span:nth-child(1) {
+    animation-delay: 0.5s;
+  }
+
+  .text-animate h2 span:nth-child(2) {
+    animation-delay: 1s;
+  }
+
+  .text-animate h2 span:nth-child(3) {
+    animation-delay: 1.5s;
+  }
+
+  .text-animate h2 span:nth-child(4) {
+    animation-delay: 2s;
+  }
+
+  .text-animate h2 span:nth-child(5) {
+    animation-delay: 2.5s;
+  }
+
+  .text-animate h2 span:nth-child(6) {
+    animation-delay: 3s;
+  }
+
+  .text-animate h2 span:nth-child(7) {
+    animation-delay: 3.5s;
+  }
+
+  .text-animate h2 span:nth-child(8) {
+    animation-delay: 4s;
+  }
+
+  .text-animate h2 span:nth-child(9) {
+    animation-delay: 4.5s;
+  }
+
+  .text-animate h2 span:nth-child(10) {
+    animation-delay: 5s;
+  }
+
+  .text-animate h2 span:nth-child(11) {
+    animation-delay: 5.5s;
+  }
+
+  .text-animate h2 span:nth-child(12) {
+    animation-delay: 6s;
+  }
+
+  .text-animate h2 span:nth-child(13) {
+    animation-delay: 6.5s;
+  }
+
+  .text-animate h2 span:nth-child(14) {
+    animation-delay: 7s;
+  }
+  .text-animate h2 span:nth-child(15) {
+    animation-delay: 7.5s;
+  }
+  .text-animate h2 span:nth-child(16) {
+    animation-delay: 8s;
+  }
+  .text-animate h2 span:nth-child(17) {
+    animation-delay: 8.5s;
+  }
+  .text-animate h2 span:nth-child(18) {
+    animation-delay: 9s;
+  }
+  .text-animate h2 span:nth-child(19) {
+    animation-delay: 9.5s;
+  }
+  .text-animate h2 span:nth-child(20) {
+    animation-delay: 10s;
+  }
+  .text-animate h2 span:nth-child(21) {
+    animation-delay: 10.5s;
+  }
+  .text-animate h2 span:nth-child(22) {
+    animation-delay: 11s;
+  }
+
+.scales p:hover{
+    transform: scale(1.02);
+    transition: 1s;
+    color: #ff6633;
+}
+
+.rb-10{
+  bottom: 8px;
+  right: 8px;
+  width: 50px;
+  height: 50px;
+}
+
+.text-justify{
+  text-align: justify;
+}
+
+/* .h-fit{
+  height: 280px;
+} */
+
+/* register */
+
+/* .d-n{
+  display: none;
+} */
+
+.d-n{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (min-width:900px){
+    .h-90{
+      height: 90vh;
+    }
+    
+}
+
+.box-shadow{
+  box-shadow: 0px 0px 15px hotpink;
+}
+
+.mb-6{
+  margin-bottom: -100px;
+}
+
+.no-up::-webkit-inner-spin-button,
+    .no-up::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+.shadows{
+  box-shadow: 0px 0px 10px rgb(30, 56, 224);
+}
