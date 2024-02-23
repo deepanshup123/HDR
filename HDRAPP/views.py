@@ -7,6 +7,21 @@ from django.contrib import messages
 def Home(request):
     return render(request, 'HDRAPP/home.html')
 
+def Contact(request):
+    return render(request, 'HDRAPP/contact.html')
+
+def Services(request):
+    return render(request, 'HDRAPP/services.html')
+
+def AboutUs(request):
+    return render(request, 'HDRAPP/aboutus.html')
+
+def FAQ(request):
+    return render(request, 'HDRAPP/faq.html')
+
+def Video(request):
+    return render(request, 'HDRAPP/video.html')
+
 def Register(request):
     if request.method == 'POST':
         username = request.POST.get('username')

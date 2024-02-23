@@ -22,4 +22,9 @@ urlpatterns = [
     path('', include('HDRAPP.urls')),
     path('register', include('HDRAPP.urls')),
     path('home', include('HDRAPP.urls')),
+    path('services', include('HDRAPP.urls')),
+    path('aboutus', include('HDRAPP.urls')),
+    path('video', include('HDRAPP.urls')),
+    path('faq', include('HDRAPP.urls')),
+    path('contact', include('HDRAPP.urls')),
 ]
