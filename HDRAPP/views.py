@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from HDRAPP.models import User_Register
-
+from HDRAPP.models import User_Register, Video_Add
+from .forms import User_Video
 from django.contrib import messages
 # Create your views here.
 
@@ -20,7 +20,17 @@ def FAQ(request):
     return render(request, 'HDRAPP/faq.html')
 
 def Video(request):
-    return render(request, 'HDRAPP/video.html')
+    if request.method == "POST":
+        form = User_Video(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+        else:
+            return render(request, 'HDRAPP/upload_video.html', {'forms': form})
+    return render(request, 'HDRAPP/upload_video.html', {'form': User_Video()})
+
+def Video_List(request):
+    videos = Video_Add.objects.all()
+    return render(request, 'HDRAPP/video.html', {'videos': videos})
 
 def Register(request):
     if request.method == 'POST':
@@ -41,3 +51,4 @@ def Register(request):
             messages.warning(request, "Please Fill all the Input Fields")
 
     return render(request, 'HDRAPP/register.html')
+

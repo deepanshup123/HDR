@@ -15,7 +15,7 @@
         <!-- Nav Bar -->
         <nav class="navbar navbar-expand-lg border-bottom border-2 border-info">
             <div class="container-fluid">
-              <img src="static/Images/LOGO_HDR.jpg" alt="LOGO_HDR" height="45px" width="45px" class="blen-mode">
+              <img src="{% static 'Images/LOGO_HDR.jpg' %}" alt="LOGO_HDR" height="45px" width="45px" class="blen-mode">
               <a class="navbar-brand ms-0 fs-4 fw-bold ws-1 text-color" href="/home">HDR</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -40,27 +40,8 @@
                   <li class="nav-item rounded-pill text-center m-1 border-right wh-8">
                     <a class="nav-link fs-5 text-black fw-semibold" href="/contact">Contact</a>
                   </li>
-                  <li class="nav-item rounded-pill text-center m-1 wh-8 dropdown border-right">
-                    <a class="nav-link dropdown-toggle fs-5 text-black fw-semibold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Finds
-                    </a>
-                    <ul class="dropdown-menu bg-pinks ">
-                      <li><a class="dropdown-item" href="/architect">Architect</a></li>
-                      <li><a class="dropdown-item" href="/g_c">General Contractor</a></li>
-                      <li><a class="dropdown-item" href="/i_d">Interior Designer</a></li>
-                      <li><a class="dropdown-item" href="/s_e">Structural Engineer</a></li>
-                      <li><a class="dropdown-item" href="/electrician">Electrician</a></li>
-                      <li><a class="dropdown-item" href="/plumber">Plumber</a></li>
-                      <li><a class="dropdown-item" href="/carpenter">Carpenter</a></li>
-                      <li><a class="dropdown-item" href="/painter">Painter</a></li>
-                      <li><a class="dropdown-item" href="/f_s">Flooring Specialist</a></li>
-                      <li><a class="dropdown-item" href="/hvac">HVAC Technician</a></li>
-                      <li><a class="dropdown-item" href="/l_g">Landscaper/Gardener</a></li>
-                      <li><a class="dropdown-item" href="/r_s">Roofing Specialist</a></li>
-                      <li><a class="dropdown-item" href="/cleaner">Cleaner</a></li>
-                      <li><a class="dropdown-item" href="/h_w">Homehold Worker</a></li>
-                      <li><a class="dropdown-item" href="/o_b">Office Boy</a></li>
-                    </ul>
+                  <li class="nav-item rounded-pill text-center m-1 border-right wh-8">
+                    <a class="nav-link fs-5 text-black fw-semibold" href="/finds">Finds</a>
                   </li>
                   <li class="nav-item rounded-pill text-center m-1 wh-8">
                     <a class="nav-link fs-5 text-black fw-semibold bg-pinks rounded-5" href="#" data-bs-toggle="modal" data-bs-target="#login">Login</a>

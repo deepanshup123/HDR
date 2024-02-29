@@ -16,15 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('HDRAPP.urls')),
-    path('register', include('HDRAPP.urls')),
-    path('home', include('HDRAPP.urls')),
-    path('services', include('HDRAPP.urls')),
-    path('aboutus', include('HDRAPP.urls')),
-    path('video', include('HDRAPP.urls')),
-    path('faq', include('HDRAPP.urls')),
-    path('contact', include('HDRAPP.urls')),
-]
+    path('register/', include('HDRAPP.urls')),
+    path('home/', include('HDRAPP.urls')),
+    path('services/', include('HDRAPP.urls')),
+    path('aboutus/', include('HDRAPP.urls')),
+    path('video/', include('HDRAPP.urls')),
+    path('upload_video/', include('HDRAPP.urls')),
+    path('faq/', include('HDRAPP.urls')),
+    path('contact/', include('HDRAPP.urls')),
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

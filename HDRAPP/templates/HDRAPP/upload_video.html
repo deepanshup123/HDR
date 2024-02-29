@@ -1,0 +1,40 @@
+{% extends 'HDRAPP/base.html' %}
+
+
+{% block body %}
+
+<div class="container-fluid h-90">
+    <div class="row  h-90 d-flex justify-content-center align-items-center">
+        
+        <div class="col-md-4 p-4 ">
+
+            <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="p-4 rounded-4 video-style">
+                    <div class="text-center text-white mb-3 border-2 border-bottom border-black text-animation-video">
+                        <h2>Upload Video</h2>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label"><strong>Video Title</strong></label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" name="{{ form.title.name }}" placeholder="Give Me Title...">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label"><strong>Video File</strong></label>
+                        <input class="form-control" type="file" name="{{ form.video.name }}" value="{{ form.video.value }}" id="formFile">
+                    </div>
+                    <div class="mt-5 text-center">
+                        <button type="submit" class="btn btn-mine-upload fs-5">Upload</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="position-fixed fixed-location-see">
+        <a href="{% url 'Video_List' %}">See Videos</a>
+    </div>
+</div>
+
+
+{% endblock body %}
