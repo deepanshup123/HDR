@@ -28,6 +28,9 @@ urlpatterns = [
     path('aboutus/', include('HDRAPP.urls')),
     path('video/', include('HDRAPP.urls')),
     path('upload_video/', include('HDRAPP.urls')),
-    path('faq/', include('HDRAPP.urls')),
+    path('user/', include('HDRAPP.urls')),
     path('contact/', include('HDRAPP.urls')),
+    path('login/', include('HDRAPP.urls')),
+    path('logout/', include('HDRAPP.urls')),
+    path('finds/', include('HDRAPP.urls')),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

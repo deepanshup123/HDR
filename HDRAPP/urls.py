@@ -10,7 +10,10 @@ urlpatterns = [
     path('aboutus/', views.AboutUs, name='aboutus'),
     path('upload_video/', views.Video, name='Video'),
     path('video/', views.Video_List, name='Video_List'),
-    path('faq/', views.FAQ, name='faq'),
+    path('user/', views.USER, name='user'),
     path('contact/', views.Contact, name='contact'),
     path('services/', views.Services, name='services'),
+    path('login/', views.Login, name='login'),
+    path('logout/', views.logout, name='logout'),
+    path('finds/', views.Find, name='finds'),
 ]

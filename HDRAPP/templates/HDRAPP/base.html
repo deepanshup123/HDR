@@ -34,18 +34,26 @@
                   <li class="nav-item rounded-pill text-center m-1 border-right wh-8">
                     <a class="nav-link fs-5 text-black fw-semibold" href="/aboutus">About Us</a>
                   </li>
-                  <li class="nav-item rounded-pill text-center m-1 border-right wh-8">
-                    <a class="nav-link fs-5 text-black fw-semibold" href="/faq">FAQ</a>
+                  {% if request.user.is_authenticated %}
+                  <li class="nav-item rounded-pill text-center m-1 border-right w-auto wh-8">
+                    <a class="nav-link fs-5 text-black fw-semibold w-auto" href="/user">{{request.user.first_name}}</a>
                   </li>
+                  {% endif %}
                   <li class="nav-item rounded-pill text-center m-1 border-right wh-8">
                     <a class="nav-link fs-5 text-black fw-semibold" href="/contact">Contact</a>
                   </li>
                   <li class="nav-item rounded-pill text-center m-1 border-right wh-8">
                     <a class="nav-link fs-5 text-black fw-semibold" href="/finds">Finds</a>
                   </li>
-                  <li class="nav-item rounded-pill text-center m-1 wh-8">
-                    <a class="nav-link fs-5 text-black fw-semibold bg-pinks rounded-5" href="#" data-bs-toggle="modal" data-bs-target="#login">Login</a>
+                  {% if request.user.is_authenticated %}
+                  <li class="nav-item rounded-pill text-center m-1 w-auto wh-8">
+                    <a class="nav-link fs-5 text-black fw-semibold bg-pinks rounded-5 w-auto" href="/logout">{{request.user.first_name}} - Logout</a>
                   </li>
+                  {% else %}
+                  <li class="nav-item rounded-pill text-center m-1 wh-8">
+                    <a class="nav-link fs-5 text-black fw-semibold bg-pinks rounded-5" href="/login">Login</a>
+                  </li>
+                  {% endif %}
                 </ul>
               </div>
             </div>
@@ -67,39 +75,6 @@
         <div class="position-fixed rb-10 bg-info rounded-5 d-flex justify-content-center ">
           <a class="fs-1 text-decoration-none text-white" href="#">^</a>
         </div>
-
-        <!-- Login Page -->
-        <div class="modal" id="login">
-          <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header bg-pink">
-                  <h1 class="modal-title fs-5" >Login Now !</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body border-5 border-warning">
-                  <form>
-                    <div class="mb-3">
-                      <label class="form-label" for="login_username">Username</label>
-                      <input type="text" name="login_username" id="login_username" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label" for="login_password">Password</label>
-                      <input type="password" name="login_password" id="login_password" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                      <p><a href="#" class="text-black">Forgot Password?</a> | <a href="#" class="text-black">Forgot Username?</a></p>
-                    </div>
-
-                  </form>
-                </div>
-                <div class="modal-footer bg-pink">
-                    <button type="button" class="btn btn-danger">Login</button>
-                    <a aria-current="page" href="/register" class="btn btn-danger">Register</a>
-                </div>
-              </div>
-          </div>
-        </div>
-
 
         <!-- Footer -->
         <div class="container-fluid h-min">
@@ -144,7 +119,7 @@
                   </ul>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title"><span><img src="static/Images/LOGO_HDR.jpg" alt="LOGO_HDR" height="25px" width="25px" class="blen-mode"></span>  HDR : HOME DREAM RENOVATION</h5>
+                  <h5 class="card-title"><span><img src="{% static 'Images/LOGO_HDR.jpg' %}" alt="LOGO_HDR" height="25px" width="25px" class="blen-mode"></span>  HDR : HOME DREAM RENOVATION</h5>
                   <a class="text-decoration-none text-black fs-5 " href="tel:9324816563">
                     93248-16563
                   </a>

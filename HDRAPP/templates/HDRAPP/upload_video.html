@@ -7,7 +7,7 @@
     <div class="row  h-90 d-flex justify-content-center align-items-center">
         
         <div class="col-md-4 p-4 ">
-
+            {% if request.user.is_authenticated %}
             <form action="" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="p-4 rounded-4 video-style">
@@ -28,6 +28,12 @@
                 </div>
 
             </form>
+            {% else %}
+            <div class="text-center ">
+                <h3 class="mb-5">Please Login To Upload Video</h3>
+                <a href="/login" style="text-decoration: none; color: black;" class="text-center border border-2 border-primary bg-pinks py-2 px-5 rounded-5 fs-5 fw-medium">Login</a>
+            </div>
+            {% endif %}
         </div>
     </div>
 

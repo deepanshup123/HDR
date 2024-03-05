@@ -1,7 +1,9 @@
-from django.shortcuts import render
-from HDRAPP.models import User_Register, Video_Add
+from django.shortcuts import render, redirect
+from HDRAPP.models import Video_Add
 from .forms import User_Video
 from django.contrib import messages
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login as user_login, logout as user_logout
 # Create your views here.
 
 def Home(request):
@@ -16,7 +18,7 @@ def Services(request):
 def AboutUs(request):
     return render(request, 'HDRAPP/aboutus.html')
 
-def FAQ(request):
+def USER(request):
     return render(request, 'HDRAPP/faq.html')
 
 def Video(request):
@@ -34,21 +36,57 @@ def Video_List(request):
 
 def Register(request):
     if request.method == 'POST':
+        fname = request.POST.get('fname')
+        lname = request.POST.get('lname')
         username = request.POST.get('username')
-        mobile = request.POST.get('mobile')
         email = request.POST.get('email')
         password = request.POST.get('password')
         confirm_password = request.POST.get('confirm_password')
 
-        if username and mobile and email and password and confirm_password:
-            information = User_Register(username=username, mobile=mobile, email=email, password=password, confirm_password=confirm_password)
-            if password == confirm_password:
-                information.save()
-                messages.success(request, "Profile details updated.")
-            else:
-                messages.warning(request, "Your Password Not Matched!")
-        else:
-            messages.warning(request, "Please Fill all the Input Fields")
+        username_check = User.objects.filter(username = username).exists()
+        email_check = User.objects.filter(email = email).exists()
 
+        if username_check == True:
+            messages.warning(request, 'Username already Exists...')
+            return redirect('/register')
+        else:
+            if email_check == True:
+                messages.warning(request, 'Email Already Exists...')
+                return redirect('/register')
+            else:
+                if password != confirm_password:
+                    messages.warning(request, 'Password Not Matched...')
+                    return redirect('/register')
+                else:
+                    user = User.objects.create_user(username=username, email=email, password=confirm_password)
+                    user.first_name = fname
+                    user.last_name = lname
+                    user.save()
+                    messages.success(request, 'Registration Successfully...')
+                    return redirect('/login')
     return render(request, 'HDRAPP/register.html')
 
+def Login(request):
+    if request.method == 'POST':
+        username = request.POST.get('login_username')
+        password = request.POST.get('login_password')
+
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            user_login(request, user)
+            messages.success(request, 'Login Succefully...')
+            return redirect('/')
+        else:
+            messages.warning(request, 'Check Your Details...')
+            return redirect('/login')
+    return render(request, 'HDRAPP/login.html')
+
+
+def logout(request):
+    user_logout(request)
+    messages.success(request, 'Logout Successfully')
+    return redirect('/')
+
+def Find(request):
+    return render(request, 'HDRAPP/finds.html')

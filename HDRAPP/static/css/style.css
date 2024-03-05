@@ -361,6 +361,12 @@ body{
   }
 }
 
+@media (max-width:1050px){
+  .width-less-d-none{
+    display: none;
+  }
+}
+
 .fixed-location-see{
   top: 90px;
   right: 20px;

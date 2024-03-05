@@ -3,12 +3,22 @@
 
 {% block body %}
 
-<div class="container-fluid h-90">
-    <div class="row">
-        <div class="col">
-            <p>Hello</p>
+<div class="container-fluid h-90 py-2">
+    <div class="row h-50-man">
+        <!-- {% for video in user_videos %}
+        <div class="col-md-2 vh-md-100 py-2">
+            <div class="h-100 for-border-pad w-100 bg-black rounded-3">
+                <video src="{{ video.video.url }}" loop height="100%" width="100%" controls class="rounded-3 "></video>
+            </div>
+            <div>
+                <p class="style-for-title"><span>{{ video.created_at }}</span>{{ video.title }}</p>
+            </div>
         </div>
+        {% endfor %}  
+    </div> -->
+    <video src="{{ request.user.video.video.url }}" loop height="100%" width="100%" controls class="rounded-3 "></video>
+    <div class="bg-white other-manual">
+        <a href="/upload_video">+</a>
     </div>
 </div>
-
 {% endblock body %}
