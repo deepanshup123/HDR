@@ -410,3 +410,51 @@ body{
   box-shadow: 0px 0px 5px rgba(61, 61, 60, 0.61);
   color: white;
 }
+
+.wh-login{
+  height: auto;
+  width: 100%;
+}
+
+.ml1 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.login-shadow{
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(116, 9, 222, 0.644);
+}
+
+
+
+.user-profile-parent-container{
+  width: 100%;
+  height: 100%;
+
+}
+
+.user-profile-container{
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+}
+
+#user-nav_section{
+  height: 100%;
+  width: 25%;
+  background-color: aquamarine;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 50px);
+  gap: 1rem;
+  padding: 0.5rem;
+  
+}
+
+#user-profile-body_section{
+  height: 100%;
+  width:100%;
+  padding: 0.5rem;
+}

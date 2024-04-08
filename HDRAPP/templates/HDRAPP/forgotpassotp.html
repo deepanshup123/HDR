@@ -1,0 +1,34 @@
+{% extends 'HDRAPP/base.html' %}
+
+
+{% block body %}
+
+<div class="container-fluid h-90">
+    <div class="row  h-90 d-flex justify-content-center align-items-center">
+        
+        <div class="col-md-4 p-4 ">
+            <form method="post">
+                {% csrf_token %}
+                <div class="p-4 rounded-4 video-style">
+                    <div class="text-center text-white mb-3 border-2 border-bottom border-black text-animation-video">
+                        <h2>Verify OTP</h2>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label"><strong>OTP</strong></label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" name="for_user_otp" placeholder="Enter Your OTP...">
+                    </div>
+                    <div class="mt-5 text-center d-flex justify-content-center">
+                        <button type="submit" class="btn btn-mine-upload fs-5">Submit</button>
+                        <div class="ms-4">
+                            <a href="{% url 'forgotpass' %}" class="btn btn-mine-upload fs-5">Back</a>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock body %}

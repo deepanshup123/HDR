@@ -33,4 +33,11 @@ urlpatterns = [
     path('login/', include('HDRAPP.urls')),
     path('logout/', include('HDRAPP.urls')),
     path('finds/', include('HDRAPP.urls')),
+    path('otp/', include('HDRAPP.urls')),
+    path('search/', include('HDRAPP.urls')),
+    path('addintrest/', include('HDRAPP.urls')),
+    path('remeber/', include('HDRAPP.urls')),
+    path('forgotpass/', include('HDRAPP.urls')),
+    path('forgotpassotp/', include('HDRAPP.urls')),
+    path('changepass/', include('HDRAPP.urls')),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

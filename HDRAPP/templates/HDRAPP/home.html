@@ -1,5 +1,5 @@
 {% extends 'HDRAPP/base.html' %}
-
+{% load static %}
 
 {% block body %}
 <div class="container-fluid w-100 vh-50">
@@ -40,7 +40,7 @@
           <div class="card-body h-fit">
             <h5 class="card-title">Architect Summary</h5>
             <p class="card-text text-justify">An architect designs and plans structures, combining creativity with technical expertise to create functional and aesthetically pleasing buildings. They oversee construction projects, ensuring adherence to design specifications and regulatory standards.</p>
-            <a href="#" class="btn btn-primary">Architect</a>
+            <button class="btn btn-primary" onclick="First()">Architect</button>
           </div>
         </div>
       </div>
@@ -50,7 +50,7 @@
           <div class="card-body h-fit">
             <h5 class="card-title">General Contractor</h5>
             <p class="card-text text-justify">A general contractor is responsible for providing all of the material, labor, equipment and services necessary for the construction of the project. A general contractor often hires specialized subcontractors to perform all or portions of the construction work.</p>
-            <a href="#" class="btn btn-primary">General Contractor</a>
+            <button class="btn btn-primary" onclick="Second()">General Contractor</button>
           </div>
         </div>
       </div>
@@ -60,7 +60,7 @@
           <div class="card-body h-fit">
             <h5 class="card-title">Interior Design</h5>
             <p class="card-text text-justify">Interior design involves creatively enhancing the interior spaces of buildings to achieve both functionality and aesthetic appeal, considering elements such as color schemes, furniture, and lighting and well-designed environments.</p>
-            <a href="#" class="btn btn-primary">Interior Design</a>
+            <button class="btn btn-primary" onclick="Third()">Interior Design</button>
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@
           <div class="card-body h-fit">
             <h5 class="card-title">Structural Engineering</h5>
             <p class="card-text text-justify">Structural engineering is the branch of civil engineering that focuses on designing and analyzing structures to ensure they can withstand various loads and environmental conditions. Structural engineers to develop infrastructure projects.</p>
-            <a href="#" class="btn btn-primary">Structural Engineering</a>
+            <button class="btn btn-primary" onclick="Fourth()">Structural Engineering</button>
           </div>
         </div>
       </div>
@@ -80,7 +80,7 @@
           <div class="card-body h-fit">
             <h5 class="card-title">Electrician</h5>
             <p class="card-text text-justify">Electricians are skilled professionals who install, maintain, and repair electrical systems in residential, commercial, and industrial settings. They ensure the safe and reliable operation of electrical components, wiring, and appliances.</p>
-            <a href="#" class="btn btn-primary">Electrician</a>
+            <button class="btn btn-primary" onclick="Fifth()">Electrician</button>
           </div>
         </div>
       </div>
@@ -90,7 +90,7 @@
           <div class="card-body h-fit">
             <h5 class="card-title">Plumber</h5>
             <p class="card-text text-justify">Plumbers are tradespeople specializing in installing and repairing plumbing systems, pipes, fixtures, and water heating systems. They play a crucial role in maintaining the proper functioning of water and drainage systems in residential.</p>
-            <a href="#" class="btn btn-primary">Plumber</a>
+            <button class="btn btn-primary" onclick="Sixth()">Plumber</button>
           </div>
         </div>
       </div>
@@ -100,7 +100,7 @@
           <div class="card-body h-fit">
             <h5 class="card-title">Carpenter</h5>
             <p class="card-text text-justify">Carpenters are skilled craftsmen who work with wood to construct, install, and repair structures such as furniture, doors, and framing. They use a variety of tools to create aesthetically pleasing wooden elements in various construction projects.</p>
-            <a href="#" class="btn btn-primary">Carpenter</a>
+            <button class="btn btn-primary" onclick="Seventh()">Carpenter</button>
           </div>
         </div>
       </div>
@@ -110,7 +110,7 @@
           <div class="card-body h-fit">
             <h5 class="card-title">Painter</h5>
             <p class="card-text text-justify">Painters specialize in applying paints and coatings to interior and exterior surfaces, enhancing the appearance of buildings and spaces. Use techniques to achieve desired finishes, providing decorative and protective solutions for walls and surfaces.</p>
-            <a href="#" class="btn btn-primary">Painter</a>
+            <button class="btn btn-primary" onclick="Eight()">Painter</button>
           </div>
         </div>
       </div>
@@ -120,7 +120,7 @@
           <div class="card-body h-fit">
             <h5 class="card-title">Flooring Specialists</h5>
             <p class="card-text text-justify">Flooring specialists are experts in installing and maintaining various types of flooring materials, such as hardwood, tile, carpet, and laminate. They ensure proper installation, durability, and Contributing to design and functionality of interior spaces.</p>
-            <a href="#" class="btn btn-primary">Flooring Specialists</a>
+            <button class="btn btn-primary" onclick="Nine()">Flooring Specialists</button>
           </div>
         </div>
       </div>
@@ -130,7 +130,7 @@
           <div class="card-body h-fit">
             <h5 class="card-title">HVAC Technicians</h5>
             <p class="card-text text-justify">HVAC technicians specialize in installing, maintaining, and repairing heating, ventilation, and air conditioning systems, ensuring efficient climate control in residential, commercial, and industrial settings for HVAC.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <button class="btn btn-primary" onclick="Tenth()">HVAV Technician</button>
           </div>
         </div>
       </div>
@@ -140,7 +140,7 @@
           <div class="card-body h-fit">
             <h5 class="card-title">Gardener</h5>
             <p class="card-text text-justify">Landscapers or gardeners are professionals who design, create, and maintain outdoor spaces, incorporating elements like plants, hardscape, and irrigation to enhance aesthetics and functionality for sustainable environments.</p>
-            <a href="#" class="btn btn-primary">Gardener</a>
+            <button class="btn btn-primary" onclick="Eleven()">Gardener</button>
           </div>
         </div>
       </div>
@@ -150,7 +150,7 @@
           <div class="card-body h-fit">
             <h5 class="card-title">Roofing Specialists</h5>
             <p class="card-text text-justify">Roofing specialists are skilled professionals who install, repair, and maintain roofs, ensuring the structural integrity and weather resistance of buildings. They work with various roofing materials commercial structures.</p>
-            <a href="#" class="btn btn-primary">Roofing Specialists</a>
+            <button class="btn btn-primary" onclick="Twelve()">Roofing Specialists</button>
           </div>
         </div>
       </div>
@@ -160,7 +160,7 @@
           <div class="card-body h-fit">
             <h5 class="card-title">Cleaner</h5>
             <p class="card-text text-justify">Cleaners are individuals responsible for maintaining cleanliness and hygiene in various environments, performing tasks such as dusting, mopping, and sanitizing surfaces to create a tidy and sanitized space for homes, offices, and public spaces.</p>
-            <a href="#" class="btn btn-primary">Cleaner</a>
+            <button class="btn btn-primary" onclick="Thirteen()">Cleaner</button>
           </div>
         </div>
       </div>
@@ -170,7 +170,7 @@
           <div class="card-body h-fit">
             <h5 class="card-title">Household Workers</h5>
             <p class="card-text text-justify">Household workers are individuals responsible for various domestic tasks, including cleaning, cooking, and general housekeeping duties. They contribute to maintaining a well-organized living space for residents functioning of a household.</p>
-            <a href="#" class="btn btn-primary">Household Workers</a>
+            <button class="btn btn-primary" onclick="Fourteen()">Household Workers</button>
           </div>
         </div>
       </div>
@@ -180,11 +180,57 @@
           <div class="card-body h-fit">
             <h5 class="card-title">Office Boy</h5>
             <p class="card-text text-justify">Office workers are professionals employed in administrative, clerical, or managerial roles within an office environment. They perform tasks such as data entry, communication management, and administrative support for the workplace.</p>
-            <a href="#" class="btn btn-primary">Office Boy</a>
+            <button class="btn btn-primary" onclick="Fifteen()">Office Boy</button>
           </div>
         </div>
       </div>
     </div>
   </div>
-
+  <script>
+    function First(){
+      window.location.href = "services#first"
+    }
+    function Second(){
+      window.location.href = "services#second"
+    }
+    function Third(){
+      window.location.href = "services#third"
+    }
+    function Fourth(){
+      window.location.href = "services#fourth"
+    }
+    function Fifth(){
+      window.location.href = "services#fifth"
+    }
+    function Sixth(){
+      window.location.href = "services#six"
+    }
+    function Seventh(){
+      window.location.href = "services#seven"
+    }
+    function Eight(){
+      window.location.href = "services#eight"
+    }
+    function Nine(){
+      window.location.href = "services#nine"
+    }
+    function Tenth(){
+      window.location.href = "services#ten"
+    }
+    function Eleven(){
+      window.location.href = "services#eleven"
+    }
+    function Twelve(){
+      window.location.href = "services#twelve"
+    }
+    function Thirteen(){
+      window.location.href = "services#thirteen"
+    }
+    function Fourteen(){
+      window.location.href = "services#fourteen"
+    }
+    function Fifteen(){
+      window.location.href = "services#fifteen"
+    }
+  </script>
   {% endblock body %}

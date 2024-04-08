@@ -1,14 +1,494 @@
 {% extends 'HDRAPP/base.html' %}
-
+{% load static %}
 
 {% block body %}
 
-<div class="container-fluid h-90">
-    <div class="row">
-        <div class="col">
-            <p>Hello</p>
+<div class="container-fluid h-90 w-100 py-3">
+    <div class="row d-flex bg-secondary rounded-3 py-2 mb-2" style="width:100%; height: 400px;" id="first">
+        <div class="col-md-6" style="height: 100%;">
+            <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true" style="height: 100%;">
+                <div class="carousel-inner" style="height: 100%;">
+                  <div class="carousel-item active">
+                    <img src="{% static 'Images/architect/A-1.jpg' %}" class="img-fluid rounded-2" alt="A-1">
+                  </div>
+                  <div class="carousel-item" style="height: 100%;">
+                    <img src="{% static 'Images/architect/A-2.jpg' %}" class="img-fluid rounded-2" alt="A-2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'Images/architect/A-4.jpg' %}" class="img-fluid rounded-2" alt="A-3">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+        <div class="col-md-6  d-flex align-items-center overflow-hidden">
+            <div class="text-white">
+                <marquee class="w-100 text-center fs-3 fw-bold">Architect Summary</marquee>
+                <p class="text-justify">An architect engineer, often referred to simply as an architect, is a professional trained in the design, planning, and oversight of construction projects. They possess expertise in both architecture and engineering principles, allowing them to integrate aesthetic and functional considerations into their designs while ensuring structural integrity and compliance with building codes and regulations. Architect engineers typically work closely with clients to understand their needs and preferences, develop design concepts, produce detailed drawings and specifications, and manage the construction process to ensure that the project is completed successfully. They may specialize in various types of projects, such as residential, commercial, or institutional buildings, and may also focus on specific areas such as sustainable design or historic preservation. Overall, architect engineers play a crucial role in shaping the built environment and bringing clients' visions to life through thoughtful and innovative design solutions.</p>
+            </div>
         </div>
     </div>
+    <div class="row d-flex bg-secondary rounded-3 py-2 mb-2" style="width:100%; height: 400px;" id="second">
+        <div class="col-md-6  d-flex align-items-center overflow-hidden">
+            <div class="text-white">
+                <marquee class="w-100 text-center fs-3 fw-bold">General Contractor</marquee>
+                <p class="text-justify">A general contractor is like the conductor of an orchestra when it comes to construction projects. They are the ones who oversee the entire process from beginning to end, ensuring that everything runs smoothly and according to plan.</p>
+                <p class="text-justify">Imagine you want to build a house. You might have an idea of what you want it to look like, but you probably don't have the expertise to make it happen. That's where a general contractor comes in. They take your vision and turn it into reality.</p>
+                <p class="text-justify">They start by working with you to understand your needs and budget. Then they hire and coordinate all the different people involved in the project, like architects, plumbers, electricians, and carpenters. They make sure everyone is working together efficiently and that the project stays on track.</p>
+            </div>
+        </div>
+        <div class="col-md-6" style="height: 100%;">
+            <div id="carouselExampleRide2" class="carousel slide" data-bs-ride="true" style="height: 100%;">
+                <div class="carousel-inner" style="height: 100%;">
+                  <div class="carousel-item active">
+                    <img src="{% static 'Images/Gen_contractor/GC-1.jpg' %}" class="img-fluid rounded-2" alt="GC-1">
+                  </div>
+                  <div class="carousel-item" style="height: 100%;">
+                    <img src="{% static 'Images/Gen_contractor/GC-2.jpg' %}" class="img-fluid rounded-2" alt="GC-2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'Images/Gen_contractor/GC-3.jpg' %}" class="img-fluid rounded-2" alt="GC-3">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide2" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide2" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+    </div>
+    <div class="row d-flex bg-secondary rounded-3 py-2 mb-2" style="width:100%; height: 400px;" id="third">
+        <div class="col-md-6" style="height: 100%;">
+            <div id="carouselExampleRide3" class="carousel slide" data-bs-ride="true" style="height: 100%;">
+                <div class="carousel-inner" style="height: 100%;">
+                  <div class="carousel-item active">
+                    <img src="{% static 'Images/Interior_design/ID-1.jpg' %}" class="img-fluid rounded-2" alt="ID-1">
+                  </div>
+                  <div class="carousel-item" style="height: 100%;">
+                    <img src="{% static 'Images/Interior_design/ID-2.jpg' %}" class="img-fluid rounded-2" alt="ID-2">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide3" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide3" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+        <div class="col-md-6  d-flex align-items-center overflow-hidden">
+            <div class="text-white">
+                <marquee class="w-100 text-center fs-3 fw-bold">Interior Design</marquee>
+                <p class="text-justify">An interior designer is like a magician who transforms empty spaces into beautiful and functional environments that reflect the personalities and lifestyles of their occupants.</p>
+                <p class="text-justify">Imagine you have a room in your house that feels dull and uninspiring. You know you want it to look better, but you're not sure where to start. That's where an interior designer comes in. They have the expertise to envision how to enhance the space and bring it to life.</p>
+                <p class="text-justify">Interior designers start by getting to know you and your preferences. They'll ask questions about your style, how you use the space, and any specific needs or desires you have. Then they'll use their creativity and knowledge of design principles to come up with a plan to transform the space.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row d-flex bg-secondary rounded-3 py-2 mb-2" style="width:100%; height: 400px;" id="fourth">
+        <div class="col-md-6  d-flex align-items-center overflow-hidden">
+            <div class="text-white">
+                <marquee class="w-100 text-center fs-3 fw-bold">Structural Engineering</marquee>
+                <p class="text-justify">A structural engineer is like an architect's unsung hero, working behind the scenes to ensure that buildings and structures stand strong and safe against the forces of nature and time.</p>
+                <p class="text-justify">Imagine you want to build a skyscraper. It's not just about making it look impressive; it's about making sure it can withstand wind, earthquakes, and the weight of all those floors. That's where a structural engineer comes in. They're the ones who design the framework that holds everything together.</p>
+                <p class="text-justify">Structural engineers start by analyzing the project's requirements and constraints. They consider factors like the building's location, its intended use, and the materials available. Then they use their expertise in physics and mathematics to design a structure that can support the intended loads and resist potential hazards.</p>
+            </div>
+        </div>
+        <div class="col-md-6" style="height: 100%;">
+            <div id="carouselExampleRide4" class="carousel slide" data-bs-ride="true" style="height: 100%;">
+                <div class="carousel-inner" style="height: 100%;">
+                  <div class="carousel-item active">
+                    <img src="{% static 'Images/structural_engineering/SE-1.jpg' %}" class="img-fluid rounded-2" alt="SE-1">
+                  </div>
+                  <div class="carousel-item" style="height: 100%;">
+                    <img src="{% static 'Images/structural_engineering/SE-2.jpg' %}" class="img-fluid rounded-2" alt="SE-2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'Images/structural_engineering/SE-3.jpg' %}" class="img-fluid rounded-2" alt="SE-3">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide4" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide4" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+    </div>
+    <div class="row d-flex bg-secondary rounded-3 py-2 mb-2" style="width:100%; height: 400px;" id="fifth">
+        <div class="col-md-6" style="height: 100%;">
+            <div id="carouselExampleRide5" class="carousel slide" data-bs-ride="true" style="height: 100%;">
+                <div class="carousel-inner" style="height: 100%;">
+                  <div class="carousel-item active">
+                    <img src="{% static 'Images/Electrician/E-1.jpg' %}" class="img-fluid rounded-2" alt="E-1">
+                  </div>
+                  <div class="carousel-item" style="height: 100%;">
+                    <img src="{% static 'Images/Electrician/E-2.jpg' %}" class="img-fluid rounded-2" alt="E-2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'Images/Electrician/E-3.jpg' %}" class="img-fluid rounded-2" alt="E-3">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide5" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide5" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+        <div class="col-md-6  d-flex align-items-center overflow-hidden">
+            <div class="text-white">
+                <marquee class="w-100 text-center fs-3 fw-bold">Electrician</marquee>
+                <p class="text-justify">An electrician is like the wizard of the modern world, wielding their expertise to bring light, power, and technology to our homes and buildings.</p>
+                <p class="text-justify">Imagine living in a world without electricity. No lights, no appliances, no devices — it's hard to even picture. That's where an electrician comes in. They're the ones who make sure the power keeps flowing, safely and reliably.</p>
+                <p class="text-justify">Electricians start by understanding the electrical needs of a space. They work with architects, builders, and homeowners to plan the layout of electrical systems, considering factors like lighting, outlets, and wiring requirements.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row d-flex bg-secondary rounded-3 py-2 mb-2" style="width:100%; height: 400px;" id="sixth">
+        <div class="col-md-6  d-flex align-items-center overflow-hidden">
+            <div class="text-white">
+                <marquee class="w-100 text-center fs-3 fw-bold">Plumber</marquee>
+                <p class="text-justify">A plumber is akin to the guardian of our plumbing systems, ensuring that water flows smoothly and safely throughout our homes and buildings while also addressing issues related to drainage, sanitation, and water conservation.</p>
+                <p class="text-justify">Imagine a day without running water or a clogged drain flooding your bathroom. That's where a plumber's expertise comes into play. They're the ones who keep our plumbing systems in working order, preventing disasters and ensuring that we have access to clean water and functioning facilities.</p>
+            </div>
+        </div>
+        <div class="col-md-6" style="height: 100%;">
+            <div id="carouselExampleRide6" class="carousel slide" data-bs-ride="true" style="height: 100%;">
+                <div class="carousel-inner" style="height: 100%;">
+                  <div class="carousel-item active">
+                    <img src="{% static 'Images/Plumber/P-1.jpg' %}" class="img-fluid rounded-2" alt="P-1">
+                  </div>
+                  <div class="carousel-item" style="height: 100%;">
+                    <img src="{% static 'Images/Plumber/P-2.jpg' %}" class="img-fluid rounded-2" alt="P-2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'Images/Plumber/P-3.jpg' %}" class="img-fluid rounded-2" alt="P-3">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide6" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide6" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+    </div>
+    <div class="row d-flex bg-secondary rounded-3 py-2 mb-2" style="width:100%; height: 400px;" id="seven">
+        <div class="col-md-6" style="height: 100%;">
+            <div id="carouselExampleRide7" class="carousel slide" data-bs-ride="true" style="height: 100%;">
+                <div class="carousel-inner" style="height: 100%;">
+                  <div class="carousel-item active">
+                    <img src="{% static 'Images/Carpenter/C-1.jpeg' %}" class="img-fluid rounded-2" alt="C-1">
+                  </div>
+                  <div class="carousel-item" style="height: 100%;">
+                    <img src="{% static 'Images/Carpenter/C-2.jpg' %}" class="img-fluid rounded-2" alt="C-2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'Images/Carpenter/C-3.jpg' %}" class="img-fluid rounded-2" alt="C-3">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide7" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide7" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+        <div class="col-md-6  d-flex align-items-center overflow-hidden">
+            <div class="text-white">
+                <marquee class="w-100 text-center fs-3 fw-bold">Carpenter</marquee>
+                <p class="text-justify">A car painter is akin to the artist of our vehicles, enhancing their appearance and protecting them from the elements through the application of paint and protective coatings.</p>
+                <p class="text-justify">Imagine driving a car with a flawless, glossy finish that gleams in the sunlight, turning heads wherever you go. That's where a car painter's expertise comes into play. They're the ones who help us maintain and enhance the aesthetic appeal of our vehicles, making them look as good as new.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row d-flex bg-secondary rounded-3 py-2 mb-2" style="width:100%; height: 400px;" id="eight">
+        <div class="col-md-6  d-flex align-items-center overflow-hidden">
+            <div class="text-white">
+                <marquee class="w-100 text-center fs-3 fw-bold">Painter</marquee>
+                <p class="text-justify">A painter is akin to the artist of our walls, adding color, texture, and personality to our indoor and outdoor spaces through the application of paint and decorative finishes.</p>
+                <p class="text-justify">Imagine walking into a room with freshly painted walls, bathed in warm hues that evoke a sense of comfort and coziness. That's where a painter's expertise comes into play. They're the ones who help us bring our vision to life, transforming dull surfaces into vibrant expressions of style and character.</p>
+            </div>
+        </div>
+        <div class="col-md-6" style="height: 100%;">
+            <div id="carouselExampleRide8" class="carousel slide" data-bs-ride="true" style="height: 100%;">
+                <div class="carousel-inner" style="height: 100%;">
+                  <div class="carousel-item active">
+                    <img src="{% static 'Images/Painter/P-1.jpg' %}" class="img-fluid rounded-2" alt="P-1">
+                  </div>
+                  <div class="carousel-item" style="height: 100%;">
+                    <img src="{% static 'Images/Painter/P-2.jpg' %}" class="img-fluid rounded-2" alt="p-2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'Images/Painter/P-3.jpg' %}" class="img-fluid rounded-2" alt="P-3">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide8" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide8" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+    </div>
+    <div class="row d-flex bg-secondary rounded-3 py-2 mb-2" style="width:100%; height: 400px;" id="nine">
+        <div class="col-md-6" style="height: 100%;">
+            <div id="carouselExampleRide9" class="carousel slide" data-bs-ride="true" style="height: 100%;">
+                <div class="carousel-inner" style="height: 100%;">
+                  <div class="carousel-item active">
+                    <img src="{% static 'Images/flooring_specialist/FS-1.jpg' %}" class="img-fluid rounded-2" alt="FS-1">
+                  </div>
+                  <div class="carousel-item" style="height: 100%;">
+                    <img src="{% static 'Images/flooring_specialist/FS-2.jpg' %}" class="img-fluid rounded-2" alt="FS-2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'Images/flooring_specialist/FS-4.jpg' %}" class="img-fluid rounded-2" alt="FS-3">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide9" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide9" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+        <div class="col-md-6  d-flex align-items-center overflow-hidden">
+            <div class="text-white">
+                <marquee class="w-100 text-center fs-3 fw-bold">Flooring Specialists</marquee>
+                <p class="text-justify">A flooring specialist is akin to the artist of our floors, transforming our indoor spaces into functional, stylish, and inviting environments through the selection, installation, and maintenance of various flooring materials.</p>
+                <p class="text-justify">Imagine walking into a room with beautifully crafted hardwood floors or luxurious carpets that invite you to sink your toes into their softness. That's where a flooring specialist's expertise comes into play. They're the ones who help us choose the perfect flooring solution to enhance the aesthetics and comfort of our indoor spaces.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row d-flex bg-secondary rounded-3 py-2 mb-2" style="width:100%; height: 400px;" id="ten">
+        <div class="col-md-6 d-flex align-items-center overflow-hidden">
+            <div class="text-white">
+                <marquee class="w-100 text-center fs-3 fw-bold">HVAC Technicians</marquee>
+                <p class="text-justify">An HVAC (Heating, Ventilation, and Air Conditioning) technician is akin to the comfort engineer of our indoor environments, ensuring that our homes, offices, and buildings are equipped with efficient and reliable systems for heating, cooling, and air quality control.</p>
+                <p class="text-justify">Imagine a cold winter day or a sweltering summer afternoon. Now imagine being able to step into a space where the temperature is just right, the air is fresh, and humidity levels are comfortable. That's where an HVAC technician's expertise shines. They're the ones who make indoor environments comfortable and conducive to our well-being.</p>
+            </div>
+        </div>
+        <div class="col-md-6" style="height: 100%;">
+            <div id="carouselExampleRide10" class="carousel slide" data-bs-ride="true" style="height: 100%;">
+                <div class="carousel-inner" style="height: 100%;">
+                    <div class="carousel-item active">
+                    <img src="{% static 'Images/HVAC/HVAC-1.jpg' %}" class="img-fluid rounded-2" alt="HVAC-1">
+                    </div>
+                    <div class="carousel-item" style="height: 100%;">
+                    <img src="{% static 'Images/HVAC/HVAC-2.jpg' %}" class="img-fluid rounded-2" alt="HVAC-2">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="{% static 'Images/HVAC/HVAC-3.jpg' %}" class="img-fluid rounded-2" alt="HVAC-3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide10" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide10" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row d-flex bg-secondary rounded-3 py-2 mb-2" style="width:100%; height: 400px;" id="eleven">
+        <div class="col-md-6" style="height: 100%;">
+            <div id="carouselExampleRide11" class="carousel slide" data-bs-ride="true" style="height: 100%;">
+                <div class="carousel-inner" style="height: 100%;">
+                  <div class="carousel-item active">
+                    <img src="{% static 'Images/Gardner/G-1.jpg' %}" class="img-fluid rounded-2" alt="G-1">
+                  </div>
+                  <div class="carousel-item" style="height: 100%;">
+                    <img src="{% static 'Images/Gardner/G-2.jpg' %}" class="img-fluid rounded-2" alt="G-2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'Images/Gardner/G-3.jpg' %}" class="img-fluid rounded-2" alt="G-3">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide11" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide11" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+        <div class="col-md-6  d-flex align-items-center overflow-hidden">
+            <div class="text-white">
+                <marquee class="w-100 text-center fs-3 fw-bold">Gardener</marquee>
+                <p class="text-justify">A gardener is akin to a nurturing artist, sculpting and cultivating outdoor spaces into vibrant, serene, and harmonious environments that connect us with nature and enhance our well-being.</p>
+                <p class="text-justify">Imagine stepping into a garden filled with lush greenery, colorful flowers, and the soothing sounds of birds chirping and leaves rustling in the breeze. That's where a gardener's magic begins. They're the ones who breathe life into outdoor spaces, transforming them into places of beauty, tranquility, and inspiration.</p>
+                <p class="text-justify">Gardeners start by understanding the unique characteristics of the land they're working with, including soil quality, sunlight exposure, climate conditions, and existing vegetation.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row d-flex bg-secondary rounded-3 py-2 mb-2" style="width:100%; height: 400px;" id="twelve">
+        <div class="col-md-6  d-flex align-items-center overflow-hidden">
+            <div class="text-white">
+                <marquee class="w-100 text-center fs-3 fw-bold">Roofing Specialists</marquee>
+                <p class="text-justify">A roofing specialist is akin to the guardian of our homes, protecting us from the elements by ensuring that our roofs are sturdy, secure, and weatherproof.</p>
+                <p class="text-justify">Picture a house without a roof. Rain pours in, wind howls through, and sunlight beats down unfiltered. That's where a roofing specialist comes in. They're the ones who ensure that our shelters remain intact and resilient against nature's fury.</p>
+                <p class="text-justify">Roofing specialists start by assessing the condition of a roof. They inspect for damage, wear and tear, and potential weaknesses, considering factors like age, material, and local climate conditions.</p>
+            </div>
+        </div>
+        <div class="col-md-6" style="height: 100%;">
+            <div id="carouselExampleRide12" class="carousel slide" data-bs-ride="true" style="height: 100%;">
+                <div class="carousel-inner" style="height: 100%;">
+                  <div class="carousel-item active">
+                    <img src="{% static 'Images/Roofing_Specialist/RS-1.jpeg' %}" class="img-fluid rounded-2" alt="RS-1">
+                  </div>
+                  <div class="carousel-item" style="height: 100%;">
+                    <img src="{% static 'Images/Roofing_Specialist/RS-2.jpg' %}" class="img-fluid rounded-2" alt="RS-2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'Images/Roofing_Specialist/RS-3.jpg' %}" class="img-fluid rounded-2" alt="RS-3">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide12" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide12" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+    </div>
+    <div class="row d-flex bg-secondary rounded-3 py-2 mb-2" style="width:100%; height: 400px;" id="thirteen">
+        <div class="col-md-6" style="height: 100%;">
+            <div id="carouselExampleRide13" class="carousel slide" data-bs-ride="true" style="height: 100%;">
+                <div class="carousel-inner" style="height: 100%;">
+                  <div class="carousel-item active">
+                    <img src="{% static 'Images/Cleaner/C-1.jpg' %}" class="img-fluid rounded-2" alt="C-1">
+                  </div>
+                  <div class="carousel-item" style="height: 100%;">
+                    <img src="{% static 'Images/Cleaner/C-2.jpg' %}" class="img-fluid rounded-2" alt="C-2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'Images/Cleaner/C-3.jpg' %}" class="img-fluid rounded-2" alt="C-3">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide13" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide13" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+        <div class="col-md-6  d-flex align-items-center overflow-hidden">
+            <div class="text-white">
+                <marquee class="w-100 text-center fs-3 fw-bold">Cleaner</marquee>
+                <p class="text-justify">A cleaner is akin to the guardian of cleanliness and hygiene in our homes, offices, and public spaces, ensuring that they are free from dirt, dust, and germs through thorough and meticulous cleaning.</p>
+                <p class="text-justify">Imagine walking into a room that is spotless, with floors shining, surfaces gleaming, and the air smelling fresh and clean. That's where a cleaner's expertise comes into play. They're the ones who make our environments not only look inviting but also safe and healthy to inhabit.</p>
+                <p class="text-justify">Cleaners start by assessing the cleaning needs of a space, whether it's a home, office, school, hospital, or commercial building.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row d-flex bg-secondary rounded-3 py-2 mb-2" style="width:100%; height: 400px;" id="fourteen">
+        <div class="col-md-6  d-flex align-items-center overflow-hidden">
+            <div class="text-white">
+                <marquee class="w-100 text-center fs-3 fw-bold">HouseHold Workers</marquee>
+                <p class="text-justify">A household worker is akin to the backbone of many households, providing essential support with various domestic tasks to ensure that the home runs smoothly and efficiently.</p>
+                <p class="text-justify">Imagine a bustling household with multiple responsibilities and chores to manage. That's where a household worker's expertise comes into play. They're the ones who help keep everything organized, clean, and well-maintained, allowing family members to focus on their daily activities without worrying about household tasks.</p>
+                <p class="text-justify"><b>1.</b> Cleaning <b>2.</b> Laundry and Ironing <b>3.</b> Meal Preparation <b>4.</b> Childcare <b>5.</b> Pet Care etc.,</p>
+            </div>
+        </div>
+        <div class="col-md-6" style="height: 100%;">
+            <div id="carouselExampleRide14" class="carousel slide" data-bs-ride="true" style="height: 100%;">
+                <div class="carousel-inner" style="height: 100%;">
+                  <div class="carousel-item active">
+                    <img src="{% static 'Images/home_worker/HW-1.jpg' %}" class="img-fluid rounded-2" alt="HW-1">
+                  </div>
+                  <div class="carousel-item" style="height: 100%;">
+                    <img src="{% static 'Images/home_worker/HW-2.jpg' %}" class="img-fluid rounded-2" alt="HW-2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'Images/home_worker/HW-3.jpg' %}" class="img-fluid rounded-2" alt="HW-3">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide14" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide14" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+    </div>
+    <div class="row d-flex bg-secondary rounded-3 py-2 mb-2" style="width:100%; height: 400px;" id="fifteen">
+        <div class="col-md-6" style="height: 100%;">
+            <div id="carouselExampleRide15" class="carousel slide" data-bs-ride="true" style="height: 100%;">
+                <div class="carousel-inner" style="height: 100%;">
+                  <div class="carousel-item active">
+                    <img src="{% static 'Images/office_boy/OB-1.jpg' %}" class="img-fluid rounded-2" alt="OB-1">
+                  </div>
+                  <div class="carousel-item" style="height: 100%;">
+                    <img src="{% static 'Images/office_boy/OB-2.jpg' %}" class="img-fluid rounded-2" alt="OB-2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'Images/office_boy/OB-3.jpg' %}" class="img-fluid rounded-2" alt="OB-3">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide15" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide15" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+        <div class="col-md-6  d-flex align-items-center overflow-hidden">
+            <div class="text-white">
+                <marquee class="w-100 text-center fs-3 fw-bold">Office Boy/Girl</marquee>
+                <p class="text-justify">An office boy, also known as an office assistant or office clerk, plays a crucial role in maintaining the smooth operation of an office environment by providing essential support with various administrative tasks and ensuring that office facilities are well-maintained.</p>
+                <p class="text-justify">Imagine a bustling office with multiple tasks to manage and deadlines to meet. That's where an office boy's expertise comes into play. They're the ones who help keep everything organized, clean, and running efficiently, allowing office staff to focus on their work without distraction.</p>
+            </div>
+        </div>
+    </div>
+    
 </div>
 
 {% endblock body %}

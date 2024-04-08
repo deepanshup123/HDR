@@ -1,14 +1,47 @@
 {% extends 'HDRAPP/base.html' %}
-
+{% load static %}
 
 {% block body %}
 
-<div class="container-fluid h-90">
-    <div class="row">
+<div class="container-fluid h-90 pt-3 ">
+    {% if request.user.is_authenticated %}
+    <div class="row mb-4 ">
         <div class="col">
-            <p>Hello</p>
+            <form class="d-flex" action="{% url 'search-list' %}" method="get" role="search">
+                {% csrf_token %}
+                <input class="form-control me-2" name="search" type="search" placeholder="Search Skill" aria-label="Search">
+                <button class="btn btn-primary" type="submit">Search</button>
+            </form>
+        </div>
+        <div class="col text-end">
+            
+            <a href="/remeber" class="btn btn-success">Remembered</a>
+            <a href="/jform" class="btn btn-success">Need Job?</a>
         </div>
     </div>
+    <div class="row">
+
+        {% for data in data %}
+        <div class="card p-3  me-3" style="width: 18rem;">
+            <img src="{{ data.image.url }}" class="card-img-top img-fluid img-thumbnail" alt="{{ data.full_name }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ data.full_name }}</h5>
+              <p class="fs-6">{{ data.city }} <br>{{ data.skill }} and {{ data.experience }} Experience</p>
+              <a href="{% url 'addintrest' data.id %}" class="btn btn-primary">Intrested</a>
+            </div>
+          </div>
+        {% endfor %}
+
+    </div>
+    {% else %}
+    <div class="text-center d-flex flex-wrap align-items-center justify-content-center h-100 pb-5 ">
+        <div>
+            <h3 class="mb-4 w-100 ">Please Login To See People <br><br>
+            <span><a href="/login" style="text-decoration: none; color: black;" class="text-center border border-2 border-primary bg-pinks py-2 px-5 rounded-5 fs-5 fw-medium">Login</a></span></h3>
+            
+        </div>
+    </div>
+    {% endif %}
 </div>
 
 {% endblock body %}

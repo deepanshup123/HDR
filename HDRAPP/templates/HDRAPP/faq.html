@@ -1,24 +1,106 @@
 {% extends 'HDRAPP/base.html' %}
-
+{% load static %}
 
 {% block body %}
+<style>
+    #user-nav_section{
+        display: none;
+        width:350px;
+    }
 
-<div class="container-fluid h-90 py-2">
-    <div class="row h-50-man">
-        <!-- {% for video in user_videos %}
-        <div class="col-md-2 vh-md-100 py-2">
-            <div class="h-100 for-border-pad w-100 bg-black rounded-3">
-                <video src="{{ video.video.url }}" loop height="100%" width="100%" controls class="rounded-3 "></video>
-            </div>
-            <div>
-                <p class="style-for-title"><span>{{ video.created_at }}</span>{{ video.title }}</p>
-            </div>
+    #user-profile-body_section{
+
+        flex-wrap: nowrap;
+    }
+
+    .h-91{
+        height: 90vh;
+        overflow: auto;
+    }
+
+    .h-20-user{
+        position: absolute;
+        top: 100px;
+        right: 30px;
+    }
+    .h-80-user{
+        height: 100%;
+    }
+
+    #size_dedu{
+        height: 200px;
+        width: 380px;
+    }
+
+    #size_dedu p span i{
+        cursor: pointer;
+    }
+</style>
+<div class="h-20-user">
+    <div class="text-end">
+        <div>
+            <img src="{% static 'Images/unprofile.png' %}" alt="LOGO_HDR" height="45px" width="45px" style="border-radius: 50%; cursor: pointer;" id="user-profile-image">
         </div>
-        {% endfor %}  
-    </div> -->
-    <video src="{{ request.user.video.video.url }}" loop height="100%" width="100%" controls class="rounded-3 "></video>
-    <div class="bg-white other-manual">
-        <a href="/upload_video">+</a>
     </div>
 </div>
+
+<div class="container-fluid h-91 py-2">
+     <div class="user-profile-parent-container h-80-user">
+        <div class="user-profile-container">
+            <div id="user-profile-body_section">
+
+                <div class="row d-flex justify-content-center ">
+                    <div class="col-md-8 bg-white p-4 rounded-3">
+                        <div class="row mb-3 ">
+                            <div class="col-4">
+                                <img src="{{ u_profile.0.image.url }}" class="img img-fluid img-thumbnail" alt="">
+                            </div>
+                            <div class="col-6">
+                                <h3 class="card-title">{{ u_profile.0.full_name}}</h3>
+                                <p class="card-text fs-5">No. {{ u_profile.0.mobile_no}}</p>
+                                <p class="card-text fs-5">Address. {{ u_profile.0.address_one }}, {{ u_profile.address_two }}</p>
+                                <p class="card-text fs-5">Experirnce {{ u_profile.0.experience }}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6"><a href="/userprofileedit/{{u_profile.0.id}}" class="btn btn-primary w-100">Edit Profile</a></div>
+                            <div class="col-md-6"><a href="/userprofiledelete/{{u_profile.0.id}}" class="btn btn-primary w-100">Delete Profile</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="size_dedu">
+                    
+                   {% for video in u_video %}
+                   <p>{{ video.title }} 
+                    <span style="float: right;">
+                    <a href="/uservideoedit/{{video.id}}"><i class="bi bi-pencil-square"></i></a>
+                    <a href="/uservideodelete/{{video.id}}"><i class="bi bi-trash-fill"></i></a>
+                    </span>
+                   </p>
+                    <video src="{{ video.video.url }}" loop height="80%" width="90%" controls class="rounded-3 "></video>
+                   {% endfor %}
+                </div>
+                
+            </div>
+            <div class="box" id="user-nav_section" >
+                <div><a href="">Profile</a></div>
+                <div><a href="">Video</a></div>
+                <div><a href="/logout">Logout</a></div>
+                <div><a href="">anymore</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    let user_profile_image = document.getElementById("user-profile-image")
+    user_profile_image.addEventListener('click', function(){
+        let user_nav_section = document.getElementById("user-nav_section")
+        if(user_nav_section.style.display === "none" || user_nav_section.style.display === "" ){
+            user_nav_section.style.display = "grid";
+        }else{
+            user_nav_section.style.display = "none" 
+        }
+    })
+</script>
 {% endblock body %}
